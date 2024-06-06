@@ -6,33 +6,26 @@
 
 :root {
     --text-color: white;
-    --bg-url: url(./bg-mobile.jpg);
+    --bg-url: url(./imgs/bg-mobile.jpg);
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.05);
-    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --surface-color-hover: rgba(255, 255, 255, 0.2);
     --highlight-color: rgba(255, 255, 255, 0.2);
     --switch-bg-url: url(./moon-stars.svg);
 }
 
-
 .light {
     --text-color: black;
-    --bg-url: url(./bg-mobile-light.jpg);
+    --bg-url: url(./imgs/bg-mobile-light.jpg);
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
-    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --surface-color-hover: rgba(0, 0, 0, 0.1);
     --highlight-color: rgba(0, 0, 0, 0.1);
     --switch-bg-url: url(./sun.svg);
-    
 }
-/*O margin é o espaço entre um elemento e seus vizinhos, enquanto o padding é o espaço entre o conteúdo do elemento e sua borda*/
 
-body{
-    /*background-image: url(./bg-mobile.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;*/
-    background: url(--bg-url) no-repeat top center/cover;
+body {
+    background: var(--bg-url) no-repeat top center/cover;
     height: 100vh;
 }
 
@@ -42,16 +35,8 @@ body * {
 }
 
 #container {
-    /*height: 712px;*/
     width: 100%;
     max-width: 588px;
-    
-    /*border: 1px solid red;
-    margin: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-    margin-left: auto;*/
-
     margin: 56px auto 0px;
     padding: 0 24px;
 }
@@ -74,7 +59,6 @@ body * {
 #switch {
     position: relative;
     width: 64px;
-
     margin: 4px auto;
 }
 
@@ -84,7 +68,6 @@ body * {
     background: white var(--switch-bg-url) no-repeat center;
     border: 0;
     border-radius: 50%;
-
     position: absolute;
     top: 50%;
     right: 0;
@@ -106,7 +89,6 @@ body * {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 9999px;
-
 }
 
 ul {
@@ -114,27 +96,21 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 16px;
-
     padding: 24px;
 }
 
-ul li a{
+ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    
     padding: 16px 24px;
-
     background: var(--surface-color);
     border: 1px solid var(--stroke-color);
     border-radius: 8px;
-
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-
     text-decoration: none;
     font-weight: 500;
-
     transition: background 0.2s;
 }
 
@@ -146,9 +122,7 @@ ul li a:hover {
 #social-links {
     display: flex;
     justify-content: center;
-
     padding: 24px 0;
-
     font-size: 24px;
 }
 
@@ -157,13 +131,12 @@ ul li a:hover {
     align-items: center;
     justify-content: center;
     padding: 16px;
-
     transition: background 0.2s;
     border-radius: 50%;
 }
 
 #social-links a:hover {
-    background:var(--highlight-color);
+    background: var(--highlight-color);
 }
 
 footer {
@@ -173,11 +146,11 @@ footer {
 }
 
 @media (min-width: 700px) {
-    :root{
-        --bg-url: url(./bg-desktop.jpg)
+    :root {
+        --bg-url: url(./imgs/bg-desktop.jpg);
     }
 
     .light {
-        --bg-url: url(./bg-desktop-light.jpg);
+        --bg-url: url(./imgs/bg-desktop-light.jpg);
     }
 }
